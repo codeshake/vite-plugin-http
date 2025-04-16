@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-http",
   "version": "1.0.0",
-  "description": "",
+  "description": "Provide http server as middleware for vite development server",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -10,12 +10,23 @@
     "dist",
     "types.d.ts"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codeshake/vite-plugin-http.git"
+  },
+  "author": "Sergei Lutov <@codeshake>",
+  "keywords": [
+    "http",
+    "vite"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codeshake/vite-plugin-http/issues"
+  },
+  "homepage": "https://github.com/codeshake/vite-plugin-http#readme",
   "scripts": {
     "build": "rollup -c"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.14.1",
     "rollup": "^4.40.0",
