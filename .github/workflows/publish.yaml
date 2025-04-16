@@ -1,0 +1,39 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        required: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: ./app
+
+      - name: Install Node js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org/
+
+      - name: Build and publish package
+        working-directory: ./app
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          npm ci
+          npm version ${{ github.event.inputs.version }}
+          git add .
+          git commit -m "package: update version"
+          git push origin HEAD
+          npm run build
+          npm publish
+
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
