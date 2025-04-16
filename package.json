@@ -1,0 +1,26 @@
+{
+  "name": "vite-plugin-http",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "types.d.ts"
+  ],
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "rollup": "^4.40.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.0"
+  }
+}
