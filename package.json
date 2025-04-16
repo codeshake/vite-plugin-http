@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-http",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Provide http server as middleware for vite development server",
   "type": "module",
   "main": "dist/index.cjs",
