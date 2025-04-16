@@ -43,8 +43,8 @@ const serverRequestListener = (request: http.IncomingMessage, response: http.Ser
     }
 }
 
-# Package also provides SSR_BUILD variable (--ssr flag)
-# It will be ignored in development mode
+// Package also provides SSR_BUILD variable (--ssr flag)
+// It will be ignored in development mode
 if (import.meta.env.SSR_BUILD) {
     const server = http.createServer(serverRequestListener)
 
